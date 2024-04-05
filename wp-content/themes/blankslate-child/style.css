@@ -1,0 +1,11 @@
+/**
+ * Theme Name: Planty
+ * Template:   blankslate
+ * ...other header fields
+ */
+
+@import url("framework.css");
+
+body {
+    background: var(--body);
+}
