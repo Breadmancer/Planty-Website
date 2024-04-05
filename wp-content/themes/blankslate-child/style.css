@@ -10,8 +10,13 @@
 /* Set-up variables */
 :root {
     --body: #ece2da;
-    --green: #3b8e46;
     --tan: #dc9f96;
+
+    --green: #3b8e46;
+
+    --peach: #e1a19e;
+    --maroon: #c02e44;
+
 }
 
 body {
