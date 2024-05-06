@@ -31,3 +31,18 @@ function oceanwp_child_enqueue_parent_style() {
 }
 
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
+
+
+
+/**
+ * Hide admin link from non-admin users
+ */
+function hide_admin_link() {
+	// Only hide the admin link from non-admin users.
+	if ( ! is_user_logged_in() || ! current_user_can( 'administrator' ) ) {
+		// Hide the admin link by injecting CSS.
+		echo '<style type="text/css"> .admin-link { display: none; } </style>';
+	}
+}
+
+add_action( 'wp_head', 'hide_admin_link' );

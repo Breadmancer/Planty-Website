@@ -3,7 +3,7 @@
  * Template:   oceanwp
  */
 
- /* -------------------------------- Variables ------------------------------- */
+/* -------------------------------- Variables ------------------------------- */
 :root {
     --body: #ece2da;
     --tan: #dc9f96;
@@ -14,8 +14,194 @@
     --maroon: #c02e44;
 }
 
+/* ------------------------------------ - ----------------------------------- */
 /* ---------------------------------- Style --------------------------------- */
+/* ------------------------------------ - ----------------------------------- */
 
-li #menu-item-49 {
-    background: red;
+/* --------------------------------- Navigation -------------------------------- */
+
+.menu-item {
+    padding: 0px 20px;
+    font-family: Syne !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+}
+
+.nav-order {
+    background-color: var(--tan);
+    padding: 0px 50px;
+}
+
+.nav-order a {
+    font-weight: 700;
+    color: white !important;
+}
+
+.nav-order:hover {
+    color: white !important;
+    background-color: var(--peach);
+}
+
+/* ------------------------------- Order Forms ------------------------------ */
+
+.divider-h {
+    margin: 15px;
+    display: block;
+    height: 1px;
+    background: white;
+}
+
+.divider-v {
+    margin: 15px;
+    display: block;
+    width: 1px;
+    background: white;
+}
+
+.orders-title {
+    font-family: Syne;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.products {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.product-block {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 14px;
+    flex-basis: 0;
+    max-width: 200px;
+}
+
+.product-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 128px;
+    width: 100%;
+}
+
+.product-name {
+    font-family: Syne;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    word-break: break-word;
+    text-wrap: balance !important;
+    text-align: center;
+}
+
+.strawberry {
+    background-image: url("Assets/strawberries.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.grapefruit {
+    background-image: url("Assets/grapefruits.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.raspberry {
+    background-image: url("Assets/raspberries.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.lemon {
+    background-image: url("Assets/lemons.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.forms-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.infos-container,
+.delivery-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.infos-container label,
+.delivery-container label {
+    display: block;
+    font-family: Syne;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+/* Relocate CF7 spinner below button to prevent alignment issues... */
+.wpcf7-spinner {
+    display: block;
+    top: 15px;
+    left: 45%;
+}
+
+/* Styles for small screens */
+@media only screen and (max-width: 768px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-block {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .forms-container {
+        flex-direction: column;
+    }
+
+    .infos-container,
+    .delivery-container {
+        width: 100%;
+    }
+
+    .infos-container label,
+    .delivery-container label {
+        text-align: center;
+    }
+
+    .order-title {
+        text-align: center;
+    }
+
+    .divider-v {
+        height: 1px;
+        width: 100%;
+        margin: 15px;
+    }
 }
